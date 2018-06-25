@@ -1,0 +1,862 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Nov 16 15:34:50 2017
+# Process ID: 13876
+# Current directory: C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.runs/synth_1
+# Command line: vivado.exe -log snake_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source snake_top.tcl
+# Log file: C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.runs/synth_1/snake_top.vds
+# Journal file: C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source snake_top.tcl -notrace
+Command: synth_design -top snake_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1396 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 308.305 ; gain = 77.871
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'snake_top' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:3]
+	Parameter idle bound to: 3'b000 
+	Parameter left bound to: 3'b001 
+	Parameter right bound to: 3'b010 
+	Parameter up bound to: 3'b011 
+	Parameter down bound to: 3'b100 
+	Parameter hit bound to: 3'b101 
+	Parameter game_over bound to: 3'b101 
+INFO: [Synth 8-638] synthesizing module 'clk_50m_generator' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:137]
+INFO: [Synth 8-256] done synthesizing module 'clk_50m_generator' (1#1) [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:137]
+INFO: [Synth 8-638] synthesizing module 'ps2_rx' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:308]
+	Parameter idle bound to: 2'b00 
+	Parameter dps bound to: 2'b01 
+	Parameter load bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:372]
+INFO: [Synth 8-256] done synthesizing module 'ps2_rx' (2#1) [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:308]
+INFO: [Synth 8-638] synthesizing module 'vga_sync' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:159]
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 48 - type: integer 
+	Parameter HB bound to: 16 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vga_sync' (3#1) [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:159]
+INFO: [Synth 8-638] synthesizing module 'snake_graph_animate' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:402]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter WALL_X_L bound to: 32 - type: integer 
+	Parameter WALL_X_R bound to: 35 - type: integer 
+	Parameter BALL_SIZE bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:639]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (4#1) [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:639]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:544]
+WARNING: [Synth 8-6014] Unused sequential element snakeX_reg[127] was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-6014] Unused sequential element snakeY_reg[127] was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-6014] Unused sequential element count1 was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:534]
+WARNING: [Synth 8-6014] Unused sequential element count3 was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:534]
+WARNING: [Synth 8-6014] Unused sequential element found_reg was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:563]
+WARNING: [Synth 8-3848] Net size in module/entity snake_graph_animate does not have driver. [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:460]
+WARNING: [Synth 8-3848] Net snakeHead in module/entity snake_graph_animate does not have driver. [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:465]
+WARNING: [Synth 8-3848] Net goodCollision in module/entity snake_graph_animate does not have driver. [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:409]
+WARNING: [Synth 8-3848] Net badCollision in module/entity snake_graph_animate does not have driver. [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:409]
+INFO: [Synth 8-256] done synthesizing module 'snake_graph_animate' (5#1) [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:402]
+WARNING: [Synth 8-350] instance 'snake_graph_an_unit' of module 'snake_graph_animate' requires 13 connections, but only 12 given [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:46]
+INFO: [Synth 8-638] synthesizing module 'm100_counter' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:257]
+INFO: [Synth 8-256] done synthesizing module 'm100_counter' (6#1) [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:257]
+WARNING: [Synth 8-151] case item 3'b100 is unreachable [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:106]
+WARNING: [Synth 8-151] case item 3'b101 is unreachable [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:112]
+WARNING: [Synth 8-151] case item 3'b101 is unreachable [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:115]
+WARNING: [Synth 8-3848] Net newApple in module/entity snake_top does not have driver. [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:32]
+WARNING: [Synth 8-3848] Net reset_clk in module/entity snake_top does not have driver. [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:35]
+WARNING: [Synth 8-3848] Net miss in module/entity snake_top does not have driver. [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:24]
+INFO: [Synth 8-256] done synthesizing module 'snake_top' (7#1) [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:3]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port goodCollision
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port badCollision
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port newApple
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig0[3]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig0[2]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig0[1]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig0[0]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig1[3]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig1[2]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig1[1]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig1[0]
+WARNING: [Synth 8-3331] design snake_top has unconnected port start
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 373.430 ; gain = 142.996
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin myclk:reset_clk to constant 0 [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:35]
+WARNING: [Synth 8-3295] tying undriven pin snake_graph_an_unit:start to constant 0 [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:46]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 373.430 ; gain = 142.996
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/snake_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/snake_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 681.652 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_next" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element v_count_reg_reg was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:194]
+WARNING: [Synth 8-6014] Unused sequential element h_count_reg_reg was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:195]
+WARNING: [Synth 8-6014] Unused sequential element addr_reg_reg was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:650]
+INFO: [Synth 8-5544] ROM "snakeX" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "snakeY" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dig1_next" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'bit_addr_reg' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:627]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeBody_reg' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:569]
+WARNING: [Synth 8-327] inferring latch for variable 'row_addr_reg' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:626]
+WARNING: [Synth 8-327] inferring latch for variable 'char_addr_reg' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:625]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[1]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[1]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[2]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[2]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[3]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[3]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[4]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[4]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[5]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[5]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[6]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[6]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[7]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[7]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[8]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[8]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[9]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[9]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[10]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[10]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[11]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[11]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[12]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[12]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[13]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[13]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[14]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[14]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[15]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[15]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[16]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[16]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[17]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[17]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[18]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[18]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[19]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[19]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[20]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[20]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[21]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[21]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[22]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[22]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[23]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[23]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[24]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[24]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[25]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[25]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[26]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[26]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[27]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[27]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[28]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[28]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[29]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[29]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[30]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[30]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[31]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[31]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[32]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[32]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[33]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[33]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[34]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[34]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[35]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[35]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[36]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[36]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[37]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[37]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[38]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[38]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[39]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[39]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[40]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[40]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[41]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[41]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[42]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[42]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[43]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[43]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[44]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[44]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[45]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[45]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[46]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[46]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[47]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[47]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeY_reg[48]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:541]
+WARNING: [Synth 8-327] inferring latch for variable 'snakeX_reg[48]' [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:540]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 126   
+	   3 Input     11 Bit       Adders := 126   
+	   2 Input     10 Bit       Adders := 6     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   3 Input      3 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 2     
+	   5 Input     10 Bit        Muxes := 1     
+	   5 Input      9 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 255   
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module snake_top 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module clk_50m_generator 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module ps2_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module vga_sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+Module font_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module snake_graph_animate 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 126   
+	   3 Input     11 Bit       Adders := 126   
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      3 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 4     
+	   5 Input     10 Bit        Muxes := 1     
+	   5 Input      9 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 250   
+	   5 Input      1 Bit        Muxes := 2     
+Module m100_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element font_unit/addr_reg_reg was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:650]
+WARNING: [Synth 8-6014] Unused sequential element vsync_unit/h_count_reg_reg was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:195]
+WARNING: [Synth 8-6014] Unused sequential element vsync_unit/v_count_reg_reg was removed.  [C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.srcs/sources_1/new/snake_top.v:194]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port goodCollision
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port badCollision
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port newApple
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig0[3]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig0[2]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig0[1]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig0[0]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig1[3]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig1[2]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig1[1]
+WARNING: [Synth 8-3331] design snake_graph_animate has unconnected port dig1[0]
+WARNING: [Synth 8-3331] design snake_top has unconnected port start
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][3]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][3]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][4]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][4]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][5]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][5]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][6]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][6]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][7]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][7]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][8]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeY_reg[0][8]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][3]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][3]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][4]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][4]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][5]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][5]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][6]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][6]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][7]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][7]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][8]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][8]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][9]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/\snakeX_reg[0][9]  is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\char_addr_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[126][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[126][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[126][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[126][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[126][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[126][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[126][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[126][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[126][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[126][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[126][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[126][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[126][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[126][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[126][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[126][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[126][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[126][8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[126][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[125][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[125][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[125][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[125][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[125][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[125][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[125][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[125][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[125][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[125][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[125][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[125][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[125][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[125][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[125][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[125][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[125][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[125][8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[125][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[124][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[124][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[124][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[124][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[124][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[124][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[124][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[124][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[124][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[124][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[124][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[124][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[124][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[124][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[124][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[124][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[124][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[124][8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[124][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[123][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[123][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[123][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[123][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[123][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[123][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[123][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[123][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[123][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[123][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[123][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[123][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[123][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[123][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[123][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[123][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[123][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[123][8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[123][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[122][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[122][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[122][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[122][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[122][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[122][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[122][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[122][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[122][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[122][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[122][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[122][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[122][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[122][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[122][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[122][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[122][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeX_reg[122][8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeX_reg[122][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[121][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[121][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (snake_graph_an_unit/\snakeY_reg[121][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_graph_an_unit/\snakeY_reg[121][3] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[0]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[1]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[8]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[7]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[6]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[5]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[4]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[3]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[2]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_y_reg_reg[9]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_x_reg_reg[1]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_x_reg_reg[0]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_x_reg_reg[2]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_x_reg_reg[3]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_x_reg_reg[4]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_x_reg_reg[5]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_x_reg_reg[6]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'snake_graph_an_unit/ball_x_reg_reg[7]' (FDC) to 'snake_graph_an_unit/ball_x_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg_reg[0]' (FDE) to 'rgb_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg_reg[1]' (FDE) to 'rgb_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg_reg[2]' (FDE) to 'rgb_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg_reg[4]' (FDE) to 'rgb_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg_reg[5]' (FDE) to 'rgb_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg_reg[6]' (FDE) to 'rgb_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg_reg[8]' (FDE) to 'rgb_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg_reg[9]' (FDE) to 'rgb_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg_reg[10]' (FDE) to 'rgb_reg_reg[11]'
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-3332] Sequential element (char_addr_reg[5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[1][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[1][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[1][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[1][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[1][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[1][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[1][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[1][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[1][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][9]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[1][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[2][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[2][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[2][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[2][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[2][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[2][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[2][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[2][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[2][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][9]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[2][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[3][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[3][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[3][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[3][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[3][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[3][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[3][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[3][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[3][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][9]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[3][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[4][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[4][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[4][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[4][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[4][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[4][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[4][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[4][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[4][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][9]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[4][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[5][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[5][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[5][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[5][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[5][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[5][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[5][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[5][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[5][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][9]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][5]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][4]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][3]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][2]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][1]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeX_reg[5][0]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[6][8]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[6][7]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[6][6]) is unused and will be removed from module snake_graph_animate.
+WARNING: [Synth 8-3332] Sequential element (snakeY_reg[6][5]) is unused and will be removed from module snake_graph_animate.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++--------------------+------------------------+---------------+----------------+
+|Module Name         | RTL Object             | Depth x Width | Implemented As | 
++--------------------+------------------------+---------------+----------------+
+|font_rom            | addr_reg_reg           | 2048x8        | Block RAM      | 
+|snake_graph_animate | font_unit/addr_reg_reg | 2048x8        | Block RAM      | 
++--------------------+------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+WARNING: [Synth 8-264] enable of latch snake_graph_an_unit/snakeBody_reg is always disabled
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance snake_graph_an_unit/font_unit/addr_reg_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |     8|
+|3     |LUT1     |     3|
+|4     |LUT2     |    25|
+|5     |LUT3     |    21|
+|6     |LUT4     |    14|
+|7     |LUT5     |    10|
+|8     |LUT6     |    15|
+|9     |RAMB18E1 |     1|
+|10    |FDCE     |    24|
+|11    |FDRE     |     3|
+|12    |LD       |    13|
+|13    |IBUF     |     2|
+|14    |OBUF     |    14|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------+--------------------+------+
+|      |Instance              |Module              |Cells |
++------+----------------------+--------------------+------+
+|1     |top                   |                    |   154|
+|2     |  snake_graph_an_unit |snake_graph_animate |    18|
+|3     |    font_unit         |font_rom            |     4|
+|4     |  myclk               |clk_50m_generator   |     2|
+|5     |  vsync_unit          |vga_sync            |   115|
++------+----------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 681.652 ; gain = 451.219
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2789 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 681.652 ; gain = 142.996
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 681.652 ; gain = 451.219
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  LD => LDCE: 13 instances
+
+163 Infos, 302 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 681.652 ; gain = 458.980
+INFO: [Common 17-1381] The checkpoint 'C:/Users/darks/OneDrive/Documents/ECE415/ClassProject/ClassProject.runs/synth_1/snake_top.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 681.652 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 16 15:35:42 2017...
